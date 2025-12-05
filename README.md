@@ -32,6 +32,8 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 #include<stdio.h>
 
 int main(){
+    printf("Name: SYED SAIF SYED GHOUSE\n");
+    printf("Register Number: 212224230286\n");
     int num, rem, i = 0, k;
     int binary[32];
     
@@ -54,7 +56,7 @@ int main(){
 
 ```
 # Output:
-<img width="555" height="291" alt="image" src="https://github.com/user-attachments/assets/75aa79da-119a-4113-90af-30a722ce0611" />
+<img width="831" height="265" alt="Screenshot 2025-12-05 220850" src="https://github.com/user-attachments/assets/d262a109-abca-4402-8c72-70ab548cb194" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -95,9 +97,10 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
-#include<stdio.h>
-
-int main(){
+#include <stdio.h>
+int main() {
+    printf("Name: SYED SAIF SYED GHOUSE\n");
+    printf("Register Number: 212224230286\n");
     int i, j, k, m, min, max;
     int pos[2][2];
 
@@ -153,10 +156,9 @@ int main(){
 
     return 0;
 }
-
 ```
 # Output:
-<img width="496" height="421" alt="image" src="https://github.com/user-attachments/assets/ea82c049-06aa-4a16-91cd-229c144f0dfb" />
+<img width="827" height="454" alt="Screenshot 2025-12-05 221047" src="https://github.com/user-attachments/assets/6f47ced1-1556-4fb5-929d-63431e4128ed" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -192,9 +194,10 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
-#include<stdio.h>
-
-int main(){
+#include <stdio.h>
+int main() {
+    printf("Name: SYED SAIF SYED GHOUSE\n");
+    printf("Register Number: 212224230286\n");
     char s[100], d[100];
     int i, j = 0, len = 0;
 
@@ -212,10 +215,9 @@ int main(){
     printf("%s\n", d);
     return 0;
 }
-
 ```
 # Output:
-<img width="608" height="319" alt="image" src="https://github.com/user-attachments/assets/950662cd-c2ef-4a9a-ab68-e041af4da70b" />
+<img width="828" height="322" alt="Screenshot 2025-12-05 221207" src="https://github.com/user-attachments/assets/7c908934-c712-4628-9e14-2c21f1d4bb1d" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -251,10 +253,11 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
-#include<stdio.h>
-#include<string.h>
-
-int main(){
+#include <stdio.h>
+#include <string.h>
+int main() {
+    printf("Name: SYED SAIF SYED GHOUSE\n");
+    printf("Register Number: 212224230286\n");
     char s[100];
     int visited[256] = {0};
     int i, j, n, count;
@@ -276,10 +279,9 @@ int main(){
 
     return 0;
 }
-
 ```
 # Output:
-<img width="459" height="481" alt="image" src="https://github.com/user-attachments/assets/84718156-4bbd-434b-b60e-63811a13ef24" />
+<img width="831" height="460" alt="Screenshot 2025-12-05 221343" src="https://github.com/user-attachments/assets/dfe5bdb7-8beb-4000-a306-a9d25acb4957" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -315,51 +317,55 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
-#include<stdio.h>
-#include<string.h>
+ #include <stdio.h>
+#include <string.h>
 
-int main(){
+int main() {
+    printf("NAME:SYED SAIF SYED GHOUSE\n");
+    printf("REG NO:212224230286\n");
     char str[200], words[50][50];
-    int i = 0, j = 0, k = 0, wordCount = 0;
+    int i, j, k = 0, row = 0;
 
+    printf("Enter a string: ");
     scanf("%[^\n]s", str);
 
-    while(str[i] != '\0'){
-        if(str[i] == ' '){
-            words[wordCount][j] = '\0';
-            wordCount++;
-            j = 0;
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+            words[row][k++] = str[i];
         } else {
-            words[wordCount][j] = str[i];
-            j++;
+            words[row][k] = '\0';
+            row++;
+            k = 0;
         }
-        i++;
     }
-    words[wordCount][j] = '\0';
-    wordCount++;
+    words[row][k] = '\0'; 
+    row++;
 
-    for(i = 0; i < wordCount; i++){
-        if(words[i][0] == '\0') continue;
-        for(j = i + 1; j < wordCount; j++){
-            if(strcmp(words[i], words[j]) == 0){
-                words[j][0] = '\0';
+    for (i = 0; i < row; i++) {
+        if (words[i][0] == '\0')
+            continue;
+
+        for (j = i + 1; j < row; j++) {
+            if (strcmp(words[i], words[j]) == 0) {
+                words[j][0] = '\0'; 
             }
         }
     }
 
-    for(i = 0; i < wordCount; i++){
-        if(words[i][0] != '\0')
+    printf("\nString after removing duplicate words:\n");
+    for (i = 0; i < row; i++) {
+        if (words[i][0] != '\0') {
             printf("%s ", words[i]);
+        }
     }
-    printf("\n");
 
     return 0;
-}
+} 
 
 ```
-# Output:
 
-<img width="666" height="369" alt="image" src="https://github.com/user-attachments/assets/ab308e44-e74a-42c6-b503-eb68a9225ace" />
+Output:
+# <img width="831" height="354" alt="Screenshot 2025-12-05 222549" src="https://github.com/user-attachments/assets/72f296ad-fc90-487e-8000-dba0a9e1531a" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
